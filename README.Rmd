@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# fiftyshadesofgrey
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+There is nothing wrong with some old fashion. This package, offers different black and white palettes to add to all your graphs and plots, to give some of that old fashion vibe back into a modern era. 
+
+## Installation
+
+You can install the development version of fiftyshadesofgrey like so:
+
+``` r
+devtools::install_github("arthur1timmermans/fiftyshadesofgrey")
+library(fiftyshadesofgrey)
+```
+
+## Example
+
+here is an example of how a black and white graph can look: 
+
+```{r example}
+library(fiftyshadesofgrey)
+library(tidyverse)
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(carb)), size = 4) +
+color_pallete_blackwhite()
+```
+
+

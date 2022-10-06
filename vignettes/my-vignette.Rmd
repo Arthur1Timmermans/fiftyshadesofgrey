@@ -1,0 +1,28 @@
+---
+title: "black and white color package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{black and white color package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fiftyshadesofgrey)
+```
+
+This package allows the user to apply a black and white theme to their graphs and plots. There are different black and white pelets available to find one that suits the user. 
+
+here is an example of how the package can be used on a costum dataset: 
+```{r, full.width=TRUE}
+
+```
+
+at the end, run: devtools::build_rmd()
