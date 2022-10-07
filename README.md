@@ -19,9 +19,12 @@ devtools::install_github("arthur1timmermans/fiftyshadesofgrey")
 library(fiftyshadesofgrey)
 ```
 
+it is also required to install the following packages to further use
+this demo: tidyverse readXL here
+
 ## Example
 
-here is an example of how a black and white graph can look:
+Down bellow, all different color pallets are displayed
 
 ``` r
 library(fiftyshadesofgrey)
@@ -36,8 +39,89 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 
 ggplot(mtcars, aes(hp, mpg)) +
-geom_point(aes(color = factor(carb)), size = 4) +
-color_pallete_blackwhite()
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite() + 
+  labs(title = "default black and white theme")
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "snow") + 
+  labs(title = "snow theme")
+```
+
+<img src="man/figures/README-example-2.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "azure") + 
+  labs(title = "azure theme")
+```
+
+<img src="man/figures/README-example-3.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "seashell") + 
+  labs(title = "seashell theme")
+```
+
+<img src="man/figures/README-example-4.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "lavenderblush") + 
+  labs(title = "lavenderblush theme")
+```
+
+<img src="man/figures/README-example-5.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "ivory") + 
+  labs(title = "ivory theme")
+```
+
+<img src="man/figures/README-example-6.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "honeydew") + 
+  labs(title = "honeydew theme")
+```
+
+<img src="man/figures/README-example-7.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "gray") + 
+  labs(title = "gray theme")
+```
+
+<img src="man/figures/README-example-8.png" width="100%" />
+
+``` r
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "grey") + 
+  labs(title = "grey theme")
+```
+
+<img src="man/figures/README-example-9.png" width="100%" />

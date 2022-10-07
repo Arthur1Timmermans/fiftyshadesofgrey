@@ -29,17 +29,63 @@ devtools::install_github("arthur1timmermans/fiftyshadesofgrey")
 library(fiftyshadesofgrey)
 ```
 
+it is also required to install the following packages to further use this demo: 
+tidyverse
+readXL
+here
+
 ## Example
 
-here is an example of how a black and white graph can look: 
+Down bellow, all different color pallets are displayed 
 
 ```{r example}
 library(fiftyshadesofgrey)
 library(tidyverse)
 
 ggplot(mtcars, aes(hp, mpg)) +
-geom_point(aes(color = factor(carb)), size = 4) +
-color_pallete_blackwhite()
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite() + 
+  labs(title = "default black and white theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "snow") + 
+  labs(title = "snow theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "azure") + 
+  labs(title = "azure theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "seashell") + 
+  labs(title = "seashell theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "lavenderblush") + 
+  labs(title = "lavenderblush theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "ivory") + 
+  labs(title = "ivory theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "honeydew") + 
+  labs(title = "honeydew theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "gray") + 
+  labs(title = "gray theme")
+
+ggplot(mtcars, aes(hp, mpg)) +
+geom_point(aes(color = factor(gear)), size = 4) +
+color_pallete_blackwhite(palette = "grey") + 
+  labs(title = "grey theme")
 ```
 
 

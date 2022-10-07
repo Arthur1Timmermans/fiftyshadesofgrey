@@ -14,15 +14,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, include=FALSE}
 library(fiftyshadesofgrey)
+library(tidyverse)
+library(readxl)
+library(here)
 ```
 
-This package allows the user to apply a black and white theme to their graphs and plots. There are different black and white pelets available to find one that suits the user. 
+This package allows the user to apply a black and white theme to their graphs and plots. There are different black and white palettes available to find one that suits the user. 
 
-here is an example of how the package can be used on a costum dataset: 
+here is an example of how the package can be used on a custom data set. This is an fictional, self made data set. The displayed color palette is the default palette. 
 ```{r, full.width=TRUE}
+testdata <- read_excel(here::here("vignettes/test_data.xlsx"))
 
+ggplot(testdata, aes(age, hight) ) +
+geom_point(aes(color = factor(gender)), size = 4) +
+color_pallete_blackwhite()
 ```
 
-at the end, run: devtools::build_rmd()
+
