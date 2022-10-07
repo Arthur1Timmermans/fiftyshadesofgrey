@@ -14,3 +14,5 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+URL: https://github.com/Arthur1Timmermans/fiftyshadesofgrey
+BugReports: https://github.com/Arthur1Timmermans/fiftyshadesofgrey/issues
