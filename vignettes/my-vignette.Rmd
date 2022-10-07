@@ -23,7 +23,7 @@ library(here)
 
 This package allows the user to apply a black and white theme to their graphs and plots. There are different black and white palettes available to find one that suits the user. 
 
-here is an example of how the package can be used on a custom data set. This is an fictional, self made data set. The displayed color palette is the default palette. 
+here is an example of how the package can be used on a custom data set. This is an fictional, self made data set. The displayed color palette is the default palette. See the readme.md file in the main folder for an overview of all color pallets. 
 ```{r, full.width=TRUE}
 testdata <- read_excel(here::here("vignettes/test_data.xlsx"))
 
