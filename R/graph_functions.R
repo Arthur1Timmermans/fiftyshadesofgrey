@@ -106,12 +106,14 @@ correlation_function <- function(data1 = quick_select_data) {
   print(shapiro1$p.value)
   print(shapiro2$p.value)
 
-if(shapiro1$p.value & shapiro2$p.value <0.05) {
+if(shapiro1$p.value & shapiro2$p.value >0.05) {
+  cor2 <- cor(quick_select_data$x, quick_select_data$y, method = "pearson")
+  print("the data was normaly distrubuted, a pearson correlation test was run to compare x and y and the P-value is")
+  cor2
+
+} else {
   cor1<-  cor(quick_select_data$x, quick_select_data$y, method = "spearman")
   print("the data was not normaly distrubuted, a spearman correlation test was run and the P-value is")
   cor1
-
-} else {cor2 <- cor(quick_select_data$x, quick_select_data$y, method = "pearson")
-  print("the data was normaly distrubuted, a pearson correlation test was run to compare x and y and the P-value is")
-  cor2}
+}
 }
