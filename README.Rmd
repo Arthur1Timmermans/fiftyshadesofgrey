@@ -18,7 +18,18 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-There is nothing wrong with some old fashion. This package, offers different black and white palettes to add to all your graphs and plots, to give some of that old fashion vibe back into a modern era. 
+There is nothing wrong with some old fashion. This package, offers different black and white palettes to add to all your graphs and plots, to give some of that old fashion vibe back into a modern era. Further more, this package includes a function to quickly generate: 
+
+- table/data frame displaying the data types 
+- a scattered dot plot 
+- box plot 
+- line graph 
+- column graph 
+- bar graph 
+- correlation test between 2 variables 
+
+this makes it easy and quick to roughly  scan through newly imported data before a proper and tidy analysis will be performed. 
+
 
 ## Installation
 
@@ -36,9 +47,23 @@ here
 
 ## Example
 
+down bellow a demonstration of the quick functions is given 
+
+```{r example1}
+library(fiftyshadesofgrey)
+library(tidyverse)
+
+quick_Select_function(mtcars$gear, mtcars$hp, mtcars$mpg)
+
+graph_function()
+
+correlation_function()
+```
+
+
 Down bellow, all different color pallets are displayed 
 
-```{r example}
+```{r example2}
 library(fiftyshadesofgrey)
 library(tidyverse)
 

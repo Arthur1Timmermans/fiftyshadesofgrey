@@ -27,9 +27,13 @@ here is an example of how the package can be used on a custom data set. This is 
 ```{r, full.width=TRUE}
 testdata <- read_excel(here::here("vignettes/test_data.xlsx"))
 
-ggplot(testdata, aes(age, hight) ) +
-geom_point(aes(color = factor(gender)), size = 4) +
-color_pallete_blackwhite()
+
+
+quick_Select_function(testdata$gender, testdata$age, testdata$hight)
+
+graph_function()
+
+correlation_function()
 ```
 
 
