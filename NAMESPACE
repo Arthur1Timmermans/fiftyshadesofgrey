@@ -2,4 +2,7 @@
 
 export(blackwhite_pal)
 export(color_pallete_blackwhite)
+export(correlation_function)
 export(fill_pallete_blackwhite)
+export(graph_function)
+export(quick_Select_function)
